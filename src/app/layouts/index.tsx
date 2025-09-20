@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import { Button } from '@/components/ui/button';
 import '../styles/globals.css';
 import Link from 'next/link';
-
+// import 'react-day-picker/style.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -17,10 +17,12 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
       <body className={inter.className}>
         <div className="container">
           <header
-            style={{ fontFamily: 'KccAnchangho' }}
+            // style={{ fontFamily: 'KccAnchangho' }}
             className="text-xl  p-5 box-border flex justify-between"
           >
-            <h1 className=" text-2xl">문학의 정원</h1>
+            <h1 className=" text-2xl">
+              <Link href="/">문학의 정원</Link>
+            </h1>
             <menu className="flex justify-between  gap-10">
               <Link href="/About">
                 <li>모임소개</li>
