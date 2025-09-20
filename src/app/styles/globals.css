@@ -54,7 +54,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: #ffffff99;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -133,12 +133,14 @@
 body {
   font-family: 'KccAnchangho', sans-serif;
   /* background-image: url(../../../public/background.png); */
-  background-color: #ffffff99;
+  /* background-color: var(--background); */
   color: #451a03;
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
+  scrollbar-width: thin;
+  scrollbar-color: black white;
 }
 * {
   /* font-family: 'KccAnchangho', sans-serif; */

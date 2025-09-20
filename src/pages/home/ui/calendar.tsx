@@ -58,19 +58,17 @@ export function Calendar03() {
     if (!date) return <div>Please pick a date.</div>;
 
     return (
-      <div className="font-anchangho text-sm">
-        <h3 className="whitespace-pre-line font-bold text-gray-800">
-          {`\n${formattedDate} 일정`}
+      <div className="font-anchangho text-sm overflow-x-hidden max-h-[600px] overflow-y-scroll">
+        <h3 className="whitespace-pre-line font-medium text-gray-800">
+          {`\n${formattedDate} 일정 \n`}
         </h3>
-
+        <br />
         <div className="schedule flex justify-between items-end">
           <div>
             <h4 className="whitespace-pre-line font-bold text-gray-800">
               {`|호암 미술관 투어(루이스 부르주아)\n`}
             </h4>
-            <div className="text-sm text-gray-600">
-              구성역에서 함께 택시로 이동
-            </div>
+            <div className="text-sm text-gray-600">오후 12:30</div>
           </div>
           {/* <Button variant="destructive">신청</Button> */}
           <Button variant="secondary">신청</Button>
@@ -79,10 +77,10 @@ export function Calendar03() {
         <div className="schedule flex justify-between items-end">
           <div>
             <h4 className="whitespace-pre-line font-bold text-gray-800 pt-3">
-              {`|호암 미술관 투어(루이스 부르주아)\n`}
+              {`|자유 작문 + 자유 독서\n`}
             </h4>
             <div className="text-sm text-gray-600">
-              구성역에서 함께 택시로 이동
+              오후 7:50 ~ 오후 10:45 카페 오늘
             </div>
           </div>
           <Button variant="secondary">신청</Button>

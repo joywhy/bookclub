@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 export function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="container">
+      <body className="{inter.className} bg-[var(--background)] text-[var(--foreground)]">
+        <div className="container ">
           <header
             // style={{ fontFamily: 'KccAnchangho' }}
             className="text-xl  p-5 box-border flex justify-between"
