@@ -94,7 +94,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
+  --primary: oklch(0.286 0.066 53.813);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -131,9 +131,20 @@
 }
 
 body {
-  font-family: 'KccAnchangho', sans-serif;
-  /* background-image: url(../../../public/background.png); */
-  /* background-color: var(--background); */
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(255, 255, 255, 1) 30%,
+
+      rgba(255, 255, 255, 0.563) 0%
+    ),
+    url('/background02.jpeg');
+
+  background-repeat: no-repeat;
+  background-size: cover; /* 화면 가득 채움 */
+  background-position: top;
+  background-attachment: fixed;
   color: #451a03;
   height: 100vh;
   width: 100vw;
@@ -146,7 +157,7 @@ body {
   /* font-family: 'KccAnchangho', sans-serif; */
 }
 .container {
-  font-family: 'KccAnchangho', sans-serif;
+  /* font-family: 'KccAnchangho', sans-serif; */
   max-width: 1000px;
   margin: 0 auto;
 }

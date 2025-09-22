@@ -11,12 +11,12 @@ import React from 'react';
 
 const Slide = () => {
   return (
-    <Carousel className={`border-2 col-span-2 rounded-lg overflow-hidden `}>
-      <CarouselContent className="">
+    <Carousel className={`col-span-2 rounded-lg overflow-hidden  w-full `}>
+      <CarouselContent className="-ml-3">
         {[1, 2, 3, 4, 5].map((img) => (
           <CarouselItem
             key={`슬라이드${img + 3}`}
-            className="relative w-full aspect-video sm:aspect-[4/3]"
+            className="relative w-full aspect-video sm:aspect-[4/3] pl-3 "
           >
             <Image
               src={`/slide/${img}.jpeg`}

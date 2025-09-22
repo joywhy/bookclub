@@ -9,29 +9,31 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Card } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 const PreviewFeed = () => {
   return (
-    <Card className="col-span-2">
-      <Table>
-        <TableCaption>A list of your recent invoices.</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          <TableRow>
-            <TableCell className="font-medium">INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell className="text-right">$250.00</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </Card>
+    <Carousel
+      orientation="vertical"
+      className="border-2 h-10"
+      opts={{
+        align: 'start',
+        loop: true,
+      }}
+    >
+      <CarouselContent className="-ml-4">
+        <CarouselItem className="pl-4">
+          [새로운 글] 000님의 글이 올라왔어요 ~!{' '}
+        </CarouselItem>
+        <CarouselItem className="pl-4">...</CarouselItem>
+        <CarouselItem className="pl-4">...</CarouselItem>
+      </CarouselContent>
+    </Carousel>
   );
 };
 

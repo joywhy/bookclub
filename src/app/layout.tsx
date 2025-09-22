@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Button } from '@/components/ui/button';
-import '../styles/globals.css';
+import './styles/globals.css';
 import Link from 'next/link';
 // import 'react-day-picker/style.css';
 const inter = Inter({ subsets: ['latin'] });
@@ -14,29 +14,26 @@ export const metadata: Metadata = {
 export function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="{inter.className} bg-[var(--background)] text-[var(--foreground)]">
-        <div className="container ">
-          <header
-            // style={{ fontFamily: 'KccAnchangho' }}
-            className="text-xl  p-5 box-border flex justify-between"
-          >
-            <h1 className=" text-2xl">
+      <body className="{inter.className}  text-[var(--foreground)]">
+        <div className="container">
+          <header className="text-xl  pt-15 pb-10 box-border flex justify-between">
+            <h1 className=" text-2xl" style={{ fontFamily: 'KccAnchangho' }}>
               <Link href="/">문학의 정원</Link>
             </h1>
-            <menu className="flex justify-between  gap-10">
-              <Link href="/About">
+            <menu className="flex justify-between  gap-10 text-yellow-950 text-base">
+              <Link href="/about">
                 <li>모임소개</li>
               </Link>
-              <Link href="/Writings">
+              <Link href="/writings">
                 <li>글 마당</li>
               </Link>
-              <Link href="/BookClub">
+              <Link href="/bookclub">
                 <li>독서/토론</li>
               </Link>
-              <Link href="/Gallery">
+              <Link href="/gallery">
                 <li>갤러리</li>
               </Link>
-              <Link href="/Notice">
+              <Link href="/notice">
                 <li>공지사항</li>
               </Link>
             </menu>
