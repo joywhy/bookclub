@@ -1,14 +1,14 @@
-"use client"
+'use client';
 
-import * as React from "react"
+import * as React from 'react';
 
-import { Calendar } from "@/components/ui/calendar"
+import { Calendar } from '@/components/ui/calendar';
 
 export default function Calendar03() {
   const [dates, setDates] = React.useState<Date[]>([
     new Date(2025, 5, 12),
     new Date(2025, 6, 24),
-  ])
+  ]);
 
   return (
     <Calendar
@@ -21,5 +21,5 @@ export default function Calendar03() {
       max={5}
       className="rounded-lg border shadow-sm"
     />
-  )
+  );
 }

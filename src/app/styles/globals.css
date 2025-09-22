@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import 'react-day-picker/style.css';
+
 @font-face {
   font-family: 'KccAnchangho';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/KCC-Ahnchangho.woff2')
@@ -52,7 +54,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: #ffffff99;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -92,7 +94,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
+  --primary: oklch(0.286 0.066 53.813);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -129,17 +131,33 @@
 }
 
 body {
-  font-family: 'KccAnchangho', sans-serif;
-  /* background-image: url(../../../public/background.png); */
-  background-color: #ffffff99;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(255, 255, 255, 1) 30%,
+
+      rgba(255, 255, 255, 0.563) 0%
+    ),
+    url('/background02.jpeg');
+
+  background-repeat: no-repeat;
+  background-size: cover; /* 화면 가득 채움 */
+  background-position: top;
+  background-attachment: fixed;
   color: #451a03;
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
+  scrollbar-width: thin;
+  scrollbar-color: black white;
 }
-
+* {
+  /* font-family: 'KccAnchangho', sans-serif; */
+}
 .container {
-  max-width: 1200px;
+  /* font-family: 'KccAnchangho', sans-serif; */
+  max-width: 1000px;
   margin: 0 auto;
 }

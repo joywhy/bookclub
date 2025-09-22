@@ -1,0 +1,21 @@
+/*  캘린더*/
+
+.rdp {
+  border: 2px solid rgb(218, 218, 218);
+  border-radius: 10px;
+  padding: 0 auto;
+  font-family: sans-serif;
+}
+
+.rdp .rdp-day,
+.rdp .rdp-day:focus,
+.rdp .rdp-day:focus-visible,
+.rdp .rdp-day:active {
+  /* all: unset;  */
+  /* 기본 스타일 제거 */
+  /* display: inline-block; */
+  width: 42px;
+  height: 32px;
+  border-radius: 0.5rem;
+  text-align: center;
+}
