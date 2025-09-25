@@ -4,18 +4,17 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
+} from '@/src/shared/components/ui/carousel';
 import Image from 'next/image';
-import Autoplay from 'embla-carousel-autoplay';
 import React from 'react';
 
 const Slide = () => {
   return (
     <Carousel className={`col-span-2 rounded-lg overflow-hidden  w-full `}>
       <CarouselContent className="-ml-3">
-        {[1, 2, 3, 4, 5].map((img) => (
+        {[5, 2, 6, 'bg', 'bg2'].map((img) => (
           <CarouselItem
-            key={`슬라이드${img + 3}`}
+            key={`슬라이드${img + '3'}`}
             className="relative w-full aspect-video sm:aspect-[4/3] pl-3 "
           >
             <Image
