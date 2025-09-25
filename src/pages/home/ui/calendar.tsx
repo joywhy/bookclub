@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import { Calendar } from '@/components/ui/calendar';
+import { Calendar } from '@/src/shared/components/ui/calendar';
 import './Calender03.css'; // CSS 파일 import
-import { Button } from '@/components/ui/button';
+import { Button } from '@/src/shared/components/ui/button';
 
 export function Calendar03() {
   const [date, setDate] = useState<Date | undefined>(new Date());

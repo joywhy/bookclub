@@ -1,10 +1,10 @@
+import '@/src/app/styles/globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Button } from '@/components/ui/button';
-import './styles/globals.css';
-import Link from 'next/link';
-// import 'react-day-picker/style.css';
-const inter = Inter({ subsets: ['latin'] });
+
+import { kccAnchangho } from './font';
+import { ThemeProvider } from 'next-themes';
+import Header from '../shared/Header';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,37 +13,23 @@ export const metadata: Metadata = {
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="{inter.className}  text-[var(--foreground)]">
-        <div className="container">
-          <header className="text-xl  pt-15 pb-10 box-border flex justify-between">
-            <h1 className=" text-2xl" style={{ fontFamily: 'KccAnchangho' }}>
-              <Link href="/">문학의 정원</Link>
-            </h1>
-            <menu className="flex justify-between  gap-10 text-yellow-950 text-base">
-              <Link href="/about">
-                <li>모임소개</li>
-              </Link>
-              <Link href="/writings">
-                <li>글 마당</li>
-              </Link>
-              <Link href="/bookclub">
-                <li>독서/토론</li>
-              </Link>
-              <Link href="/gallery">
-                <li>갤러리</li>
-              </Link>
-              <Link href="/notice">
-                <li>공지사항</li>
-              </Link>
-            </menu>
-            <Button>
-              <Link href="/login">로그인</Link>
-            </Button>
-          </header>
-
-          {children}
+    <html lang="en" className={kccAnchangho.className} suppressHydrationWarning>
+      <body className="relative h-screen w-screen overflow-x-hidden">
+        <div className="fixed inset-0 -z-10 opacity-10">
+          <Image
+            src="/background02.jpeg"
+            alt="메인 배경 이미지"
+            fill
+            className="object-cover object-top"
+            priority
+          />
         </div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="max-w-5xl m-auto relative z-10">
+            <Header />
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
