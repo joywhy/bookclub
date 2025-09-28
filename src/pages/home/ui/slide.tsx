@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/src/shared/components/ui/carousel';
+} from '@/src/shared/ui/carousel';
 import Image from 'next/image';
 import React from 'react';
 

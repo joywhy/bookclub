@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 
-import { Calendar } from '@/src/shared/components/ui/calendar';
+import { Calendar } from '@/src/shared/ui';
 
 export default function Calendar03() {
   const [dates, setDates] = React.useState<Date[]>([

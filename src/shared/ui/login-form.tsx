@@ -1,14 +1,14 @@
 import { cn } from '@/src/lib/utils';
-import { Button } from '@/src/shared/components/ui/button';
+import { Button } from './button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/src/shared/components/ui/card';
-import { Input } from '@/src/shared/components/ui/input';
-import { Label } from '@/src/shared/components/ui/label';
+} from './card';
+import { Input } from './input';
+import { Label } from './label';
 
 export function LoginForm({
   className,
