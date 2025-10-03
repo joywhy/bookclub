@@ -7,15 +7,15 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/src/shared/components/ui/table';
-import { Card } from '@/src/shared/components/ui/card';
+} from '@/src/shared/ui/table';
+import { Card } from '@/src/shared/ui/card';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/src/shared/components/ui/carousel';
+} from '@/src/shared/ui/carousel';
 const PreviewFeed = () => {
   return (
     <Carousel

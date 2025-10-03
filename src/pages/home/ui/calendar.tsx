@@ -1,8 +1,10 @@
 'use client';
+
 import React, { useState } from 'react';
-import { Calendar } from '@/src/shared/components/ui/calendar';
-import './Calender03.css'; // CSS 파일 import
-import { Button } from '@/src/shared/components/ui/button';
+import { Calendar } from '@/src/shared/ui/calendar';
+import { Button } from '@/src/shared/ui/button';
+import './Calender03.css';
+import { ScrollArea, ScrollBar } from '@/src/shared/ui/scroll-area';
 
 export function Calendar03() {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -46,6 +48,23 @@ export function Calendar03() {
         },
       ],
     },
+    {
+      date: new Date('2025/09/19/17:22:10'),
+      work: '자유 작문 + 자유 독서',
+      memo: '장안문 옆 카페 오늘 별실',
+      members: [
+        {
+          id: 1,
+          name: '권준호',
+          img: '',
+        },
+        {
+          id: 2,
+          name: '이기욱',
+          img: '',
+        },
+      ],
+    },
   ];
   const options: Intl.DateTimeFormatOptions = {
     month: 'long',
@@ -58,34 +77,48 @@ export function Calendar03() {
     if (!date) return <div>Please pick a date.</div>;
 
     return (
-      <div className="font-anchangho text-sm overflow-x-hidden max-h-[600px] overflow-y-scroll">
-        <h3 className="whitespace-pre-line font-medium text-gray-800">
-          {`\n${formattedDate} 일정 \n`}
-        </h3>
-        <br />
-        <div className="schedule flex justify-between items-end">
-          <div>
-            <h4 className="whitespace-pre-line font-bold text-gray-800">
-              {`|호암 미술관 투어(루이스 부르주아)\n`}
-            </h4>
-            <div className="text-sm text-gray-600">오후 12:30</div>
-          </div>
-          {/* <Button variant="destructive">신청</Button> */}
-          <Button variant="secondary">신청</Button>
-        </div>
-
-        <div className="schedule flex justify-between items-end">
-          <div>
-            <h4 className="whitespace-pre-line font-bold text-gray-800 pt-3">
-              {`|자유 작문 + 자유 독서\n`}
-            </h4>
-            <div className="text-sm text-gray-600">
-              오후 7:50 ~ 오후 10:45 카페 오늘
+      <ScrollArea className="mt-2 p-2 flex-1 rounded-md border whitespace-nowrap">
+        <div className="font-anchangho text-sm overflow-x-hidden max-h-[600px] ">
+          <h3 className="whitespace-pre-line  text-gray-800">
+            {`${formattedDate} 일정 `}
+          </h3>
+          <br />
+          <div className="schedule flex justify-between items-end">
+            <div>
+              <h4 className="whitespace-pre-line font-bold text-gray-800">
+                {`|호암 미술관 투어(루이스 부르주아)\n`}
+              </h4>
+              <div className="text-sm text-gray-600">오후 12:30</div>
             </div>
+            {/* <Button variant="destructive">신청</Button> */}
+            <Button variant="secondary">신청</Button>
           </div>
-          <Button variant="secondary">신청</Button>
+
+          <div className="schedule flex justify-between items-end">
+            <div>
+              <h4 className="whitespace-pre-line font-bold text-gray-800 pt-3">
+                {`|자유 작문 + 자유 독서\n`}
+              </h4>
+              <div className="text-sm text-gray-600">
+                오후 7:50 ~ 오후 10:45 카페 오늘
+              </div>
+            </div>
+            <Button variant="secondary">신청</Button>
+          </div>
+          <div className="schedule flex justify-between items-end">
+            <div>
+              <h4 className="whitespace-pre-line font-bold text-gray-800 pt-3">
+                {`|자유 작문 + 자유 독서\n`}
+              </h4>
+              <div className="text-sm text-gray-600">
+                오후 7:50 ~ 오후 10:45 카페 오늘
+              </div>
+            </div>
+            <Button variant="secondary">신청</Button>
+          </div>
         </div>
-      </div>
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
     );
   };
 
