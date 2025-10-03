@@ -17,6 +17,7 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'var(--foreground)',
         'gray-500': 'var(--gray-500)',
+        'gray-600': '#979797',
       },
       fontFamily: {
         anchangho: ['KccAnchangho', 'sans-serif'],
